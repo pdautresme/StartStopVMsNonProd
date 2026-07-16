@@ -22,7 +22,7 @@ $subscriptionids = @"
 ]
 "@ | ConvertFrom-Json
 
-$currentUTCtime = [System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::Now,"GMT Standard Time")
+$currentUTCtime = [System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTime]::Now,"UTC")
 
 foreach ($subscriptionid in $subscriptionids) {
 # Selecting Azure Subscription
